@@ -35,7 +35,12 @@ div#body .container .header, div#body .container .header #headerimg h1, div#body
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 div#page, div#body, div#body .container, div#body .container .header, div#body .container .header #headerimg, div#body .container #sidebar, div#body .container #sidebar li, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, .post, .post .title, .post .entry, .post .postmetadata, .comments ol {
   background: none;
