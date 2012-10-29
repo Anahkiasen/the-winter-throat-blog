@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// BLOG BODY //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+div#body
+  @extend %reset
+
+  .container
+    @extend %reset
+    #content, #sidebar
+      margin-top: 265px
+
+    $aside: 4
+    #content
+      +span-columns(($total-columns - $aside))
+      background: white
+      position: relative
+      z-index: 5
+      &.one_article
+        +span-columns(10)
+        +push(1)
+    #sidebar
+      +span-columns($aside omega)
+
+
+  @import header
+  @import sidebar

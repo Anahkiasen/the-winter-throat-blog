@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////////////////
+////////////////////////// BLOG HEADER ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+.header
+  $backgroundColor: grey(10)
+  +double-shadow(4px)
+  @extend %reset
+  @extend %reset-links
+  @extend %transition
+  background: $backgroundColor url($noise)
+  position: absolute
+  left: 0
+  padding: ms(3) 0
+  width: 100%
+  &:hover
+    background-color: lighten($backgroundColor, 10)
+
+  // Main title ---------------------------------------------------- /
+
+  #headerimg
+    @extend %reset
+    h1
+      @extend %transition
+      font-family: $oswaldStack
+      margin: 0
+      text-shadow: 0 4px 0 grey(50), 0 6px 0 grey(40), -15px -20px 10px fade(black, 35), 0px 30px 30px fade(black, 35)
+      text-transform: uppercase
+      +from(1500px)
+        font-size: ms(4)
+      +from-to($wide, 1500px)
+        font-size: ms(3)
+      a
+        color: white
+    .description
+      @extend %hide

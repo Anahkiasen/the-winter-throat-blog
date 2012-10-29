@@ -1,0 +1,83 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////// BLOG SIDEBAR /////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+#sidebar
+  @extend %reset
+
+  // Layout
+  position: relative
+  right: 100px
+  padding: ms(0)
+  z-index: 0
+
+  // Appearance
+  @extend %border-box
+  background-color: fade(black, 10)
+
+  // Properties
+  @extend %transition
+  +opacity(.25)
+
+  // States
+  &:hover
+    right: 0
+    +opacity(1)
+
+  // Widgets ------------------------------------------------------- /
+
+  li
+    @extend %reset
+    .title, .widgettitle
+      $backgroundColor: #2AACD5
+      +box-shadow(0 5px 0 0 fade(black, 10))
+      +folded-corners(12px, darken($backgroundColor, 10))
+      @extend %fontSerif
+      @extend %reset
+      @extend %text-shadow
+      background-color: $backgroundColor
+      color: white
+      font-size: ms(1)
+      padding: ms(-2)
+      text-align: center
+      text-transform: lowercase
+      &:hover
+        background-color: lighten($backgroundColor, 10)
+
+    ul, form .content
+      +no-bullets
+      @extend %transition
+      background-color: fade(white, 25)
+      margin: 0 auto
+      overflow: hidden
+      padding: 0
+      width: 95%
+    form .content
+      @extend %border-box
+      padding: ms(0)
+      padding-top: 0
+      background-color: fade(white, 40)
+    li
+      $backgroundColor: fade(black, 10)
+      @extend %reset-links
+      @extend %transition
+      margin: 0
+      padding: ms(-2) ms(-1)
+      a
+        @extend %fontSerif
+        color: $linkColor
+        font-size: ms(0)
+        font-weight: 700
+      &:hover
+        @extend %text-shadow
+        padding-left: ms(0)
+        background-color: fade-in($backgroundColor, .05)
+        &:before
+          color: white
+          content: '>'
+          font-size: ms(0)
+          margin-right: ms(-1)
+        a
+          color: white
+      &:before
+        content: ''

@@ -1,0 +1,75 @@
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// COMMENTS ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+.comments
+  border: none
+
+  // Comments title ------------------------------------------------ /
+
+  .title
+    background-color: grey(30)
+    padding: ms(0)
+    border: none
+    +double-shadow
+    h3
+      @extend %text-shadow
+      color: white
+      font-size: ms(0)
+
+  // Comments block ------------------------------------------------ /
+
+  ol
+    @extend %reset
+    padding: ms(0)
+    padding-top: 0
+
+    // Comments ---------------------------------------------------- /
+
+    li
+      font-size: ms(0)
+      color: $base01
+      border: none
+
+    // Author
+    cite a
+      @extend %base-link
+      &[href="http://blogs.wefrag.com/Anahkiasen"]
+        color: $orange
+    .commentmetadata
+      border-bottom: 1px solid $base1
+      text-align: right
+      text-transform: uppercase
+      margin-bottom: -30px
+      position: relative
+      bottom: 30px
+      padding: ms(-2)
+      a
+        color: $base01
+
+    // Links
+    p a
+      @extend %base-link
+
+  // Comments form ------------------------------------------------- /
+
+  #commentform
+    padding: ms(0)
+    p
+      clear: both
+    label
+      @extend %baseBlock
+      background-color: $base01
+      float: left
+      font-weight: 100
+      margin-right: ms(-1)
+      padding: ms(-2)
+      width: 300px
+    textarea
+      @extend %border-box
+      width: 100%
+      padding: ms(0)
+      font-family: $sansFontFamily
+    input[type=submit]
+      width: 100%
+      padding: ms(-2)
