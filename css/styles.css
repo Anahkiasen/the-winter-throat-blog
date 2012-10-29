@@ -19,7 +19,7 @@ div#page {
 #header, div#body .header #headerimg .description {
   display: none; }
 
-.post .entry a:after, .comments ol cite a:after, .comments ol p a:after, .navigation div a, .post .postmetadata a, p a img, pre, input, textarea {
+.post .entry a:after, .comments ol p a:after, .navigation div a, .post .postmetadata a, p a img, pre, input, textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; }
@@ -44,10 +44,10 @@ div#body .header a, div#body #sidebar li li a, .post .title a, .post .postmetada
     color: white;
     text-decoration: none; }
 
-.post .entry a, .comments ol cite a, .comments ol p a {
+.post .entry a, .comments ol p a {
   color: #79b738;
   position: relative; }
-  .post .entry a:after, .comments ol cite a:after, .comments ol p a:after {
+  .post .entry a:after, .comments ol p a:after {
     background-color: #586e75;
     bottom: 30px;
     color: white;
@@ -56,10 +56,10 @@ div#body .header a, div#body #sidebar li li a, .post .title a, .post .postmetada
     padding: 0 5px;
     position: absolute;
     white-space: pre; }
-  .post .entry a:hover:after, .comments ol cite a:hover:after, .comments ol p a:hover:after {
+  .post .entry a:hover:after, .comments ol p a:hover:after {
     display: block; }
 
-.post .entry a:after, .comments ol cite a:after, .comments ol p a:after, .comments #commentform label, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li:hover, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
+.post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li:hover, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
 body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li a {
@@ -70,7 +70,7 @@ body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #
   font-size: 14px;
   padding: 14px; }
 
-.post .entry a:after, .comments ol cite a:after, .comments ol p a:after, .comments #commentform label, .navigation div a, .post .postmetadata a, .comments .title {
+.post .entry a:after, .comments ol p a:after, .comments #commentform label, .navigation div a, .post .postmetadata a, .comments .title {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2); }
@@ -319,8 +319,13 @@ div#body #sidebar {
       border: none;
       color: #586e75;
       font-size: 14px; }
-    .comments ol cite a[href="http://blogs.wefrag.com/Anahkiasen"] {
-      color: #cb4b16; }
+    .comments ol cite {
+      position: relative;
+      z-index: 5; }
+      .comments ol cite a {
+        color: #79b738; }
+        .comments ol cite a[href="http://blogs.wefrag.com/Anahkiasen"] {
+          color: #cb4b16; }
     .comments ol .commentmetadata {
       border-bottom: 1px solid #93a1a1;
       bottom: 30px;
@@ -328,7 +333,8 @@ div#body #sidebar {
       padding: 5px;
       position: relative;
       text-align: right;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      z-index: 0; }
       .comments ol .commentmetadata a {
         color: #586e75; }
   .comments #commentform {
