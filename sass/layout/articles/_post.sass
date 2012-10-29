@@ -91,10 +91,11 @@
 
   .postmetadata
     $backgroundColor: grey(97)
+    @extend %noisy
     @extend %reset
     @extend %reset-links
     @extend %text-shadow
-    background: $backgroundColor inline-image('noise.png')
+    background-color: $backgroundColor
     color: grey(20)
     font-size: ms(0)
     overflow: visible

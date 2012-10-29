@@ -17,7 +17,8 @@
 
   // Appearance
   +double-shadow(4px)
-  background: $backgroundColor inline-image('noise.png')
+  @extend %noisy
+  background-color: $backgroundColor
 
   // Properties
   @extend %transition
