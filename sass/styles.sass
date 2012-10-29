@@ -19,9 +19,6 @@ $baseLight: lighten($baseColor, 15)
 $bodyFontColor: $base01
 $linkColor: $base01
 
-// Image urls
-$crisp: "http://i.imgur.com/I1pSr.png"
-
 // Placeholders ---------------------------------------------------- /
 
 @import placeholders
@@ -30,7 +27,7 @@ $crisp: "http://i.imgur.com/I1pSr.png"
 
 body
   @extend %fontSerif
-  background: $baseColor url($crisp)
+  background: $baseColor inline-image('crisp_small.jpg')
   color: $bodyFontColor
 
 #header
