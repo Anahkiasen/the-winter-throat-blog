@@ -110,14 +110,14 @@ div#body .container #sidebar {
   margin-right: 0;
   #margin-left: -1em; }
 div#body .header {
-  -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-  background: #1a1a1a url("http://i.imgur.com/Lzrrl.png");
   position: absolute;
   left: 0;
   padding: 59px 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  background: #1a1a1a url("http://i.imgur.com/Lzrrl.png"); }
   div#body .header:hover {
     background-color: #333333; }
   div#body .header #headerimg h1 {

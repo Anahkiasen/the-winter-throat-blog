@@ -3,16 +3,26 @@
 //////////////////////////////////////////////////////////////////////
 
 .header
+
+  // Variables
   $backgroundColor: grey(10)
-  +double-shadow(4px)
   @extend %reset
   @extend %reset-links
-  @extend %transition
-  background: $backgroundColor url($noise)
+
+  // Structure
   position: absolute
   left: 0
   padding: ms(3) 0
   width: 100%
+
+  // Appearance
+  +double-shadow(4px)
+  background: $backgroundColor url($noise)
+
+  // Properties
+  @extend %transition
+
+  // States
   &:hover
     background-color: lighten($backgroundColor, 10)
 
@@ -20,6 +30,10 @@
 
   #headerimg
     @extend %reset
+
+    .description
+      @extend %hide
+
     h1
       @extend %transition
       font-family: $oswaldStack
@@ -32,5 +46,3 @@
         font-size: ms(3)
       a
         color: white
-    .description
-      @extend %hide

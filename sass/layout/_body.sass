@@ -7,9 +7,12 @@ div#body
 
   .container
     @extend %reset
+
+    // Header margin
     #content, #sidebar
       margin-top: 265px
 
+    // Main blocks layout
     $aside: 4
     #content
       +span-columns(($total-columns - $aside))
@@ -22,6 +25,6 @@ div#body
     #sidebar
       +span-columns($aside omega)
 
-
+  // Import other blocks
   @import header
   @import sidebar

@@ -1,3 +1,9 @@
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// PLACEHOLDERS ///////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+// Reset any wefrag styles ----------------------------------------- /
+
 %reset
   background: none
   border: none
@@ -6,12 +12,16 @@
   padding: 0
   width: auto
 
+// Bring back a link to its unstyled state ------------------------- /
+
 %reset-links
   a
     color: white
     &:hover
       color: white
       text-decoration: none
+
+// Base link style with url tooltip -------------------------------- /
 
 %base-link
   color: $nodeGreen
@@ -32,11 +42,17 @@
     &:after
       display: block
 
+// Base text-shadow ------------------------------------------------ /
+
 %text-shadow
   text-shadow: 0 2px 0 fade(black, 20)
 
+// Base font family  ----------------------------------------------- /
+
 %fontSerif
   font-family: 'Kreon', $sansFontFamily
+
+// Base block module ----------------------------------------------- /
 
 %baseBlock
   @extend %double-shadow
@@ -44,6 +60,8 @@
   color: white
   font-size: ms(0)
   padding: ms(0)
+
+// Base double-shadow style ---------------------------------------- /
 
 %double-shadow
   +double-shadow
