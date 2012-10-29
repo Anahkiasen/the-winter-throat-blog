@@ -1,1 +1,8 @@
 .sass-cache
+
+# Ignore test HTML
+index.html
+article.html
+wefrag_files
+
+# Ignore old design

@@ -20,52 +20,7 @@ $noise: "http://i.imgur.com/Lzrrl.png"
 
 // Placeholders ---------------------------------------------------- /
 
-%reset
-  background: none
-  border: none
-  height: auto
-  margin: 0
-  padding: 0
-  width: auto
-
-%reset-links
-  a
-    color: white
-    &:hover
-      color: white
-      text-decoration: none
-
-%base-link
-  color: $nodeGreen
-  position: relative
-  &:after
-    +double-shadow
-    @extend %rounded-corners
-    @extend %text-shadow
-    background-color: $base01
-    bottom: 30px
-    color: white
-    content: attr(href)
-    display: none
-    padding: 0 5px
-    position: absolute
-    white-space: pre
-  &:hover
-    &:after
-      display: block
-
-%text-shadow
-  text-shadow: 0 2px 0 fade(black, 20)
-
-%fontSerif
-  font-family: 'Kreon', $sansFontFamily
-
-%baseBlock
-  +double-shadow
-  @extend %text-shadow
-  color: white
-  font-size: ms(0)
-  padding: ms(0)
+@import placeholders
 
 // Scaffolding ------------------------------------------------------/
 
