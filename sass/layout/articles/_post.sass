@@ -1,0 +1,116 @@
+//////////////////////////////////////////////////////////////////////
+////////////////////////// BLOG ARTICLES /////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+.navigation
+  padding: ms(0)
+  margin-bottom: ms(-1)
+  div
+    font-size: 0
+    a
+      @extend %rounded-corners
+      @extend %double-shadow
+      background-color: $nodeGreen
+      @extend %text-shadow
+      color: white
+      display: block
+      font-size: ms(-0)
+      padding: ms(-2)
+      &:hover
+        text-decoration: none
+        background-color: darken($nodeGreen, 10)
+    &.alignleft a:before
+      content: '<< '
+
+.post
+  @extend %reset
+  margin-bottom: ms(1)
+
+  // Articles title ------------------------------------------------ /
+
+  .title
+    $titleColor: darken($baseColor, 70)
+    +box-shadow(0 0 10px fade(black, 20), double-shadow(2px))
+    +gradient-auto-vertical($titleColor)
+    @extend %reset
+    @extend %reset-links
+    @extend %text-shadow
+    @extend %transition
+    background-color: $titleColor
+    padding: ms(0) ms(1)
+    position: relative
+    z-index: 5
+    h2
+      color: white
+      font-family: $oswaldStack
+      font-size: ms(2)
+      text-shadow: 0 4px 0 fade(black, 30)
+      text-transform: uppercase
+      +to($tablet)
+        font-size: ms(1)
+    &:hover
+      background-color: darken($titleColor, 5)
+      +gradient-auto-vertical(darken($titleColor, 5))
+      padding-left: ms(2)
+
+    // Main title
+    a
+      color: white
+    small
+      color: white
+      font-size: ms(0)
+
+  // Articles body ------------------------------------------------- /
+
+  .entry
+    @extend %reset
+    color: $bodyFontColor
+    overflow: visible
+    padding: ms(0)
+    .one_article &
+      padding-bottom: 0
+    h1, h2
+      color: darken($bodyFontColor, 20)
+    h1
+      padding-bottom: ms(-2)
+      border-bottom: 1px solid grey(90)
+      font-size: ms(1.5)
+    img
+      max-width: 100%
+      height: auto
+    p
+      font-size: ms(0.5)
+      text-align: justify
+      &.wp-caption-text
+        padding: ms(-1)
+        text-align: center
+    a
+      @extend %base-link
+
+  // Articles footer ----------------------------------------------- /
+
+  .postmetadata
+    $backgroundColor: grey(97)
+    @extend %reset
+    @extend %reset-links
+    @extend %text-shadow
+    background: $backgroundColor inline-image('noise.png')
+    color: grey(20)
+    font-size: ms(0)
+    overflow: visible
+    padding: ms(0)
+    text-shadow: 0 2px 0 fade(black, 10)
+    .one_article &
+      font-size: ms(0.5)
+    a
+      $backgroundColor: grey(40)
+      @extend %double-shadow
+      @extend %rounded-corners
+      @extend %transition
+      background-color: darken($backgroundColor, 10)
+      color: white
+      padding: 0 5px
+      position: relative
+      &:hover
+        background-color: lighten($backgroundColor, 5)
+        bottom: 2px
