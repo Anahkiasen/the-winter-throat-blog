@@ -85,12 +85,11 @@
   // Articles footer ----------------------------------------------- /
 
   .postmetadata
-    $backgroundColor: grey(95)
-    @extend %double-shadow
+    $backgroundColor: grey(97)
     @extend %reset
     @extend %reset-links
     @extend %text-shadow
-    background: $backgroundColor url($crisp)
+    background: $backgroundColor inline-image('noise.png')
     color: grey(20)
     font-size: ms(0)
     overflow: visible
@@ -106,9 +105,7 @@
       background-color: darken($backgroundColor, 10)
       color: white
       padding: 0 5px
+      position: relative
       &:hover
-        @extend %double-shadow
         background-color: lighten($backgroundColor, 5)
         bottom: 2px
-        padding-bottom: 2px
-        position: relative
