@@ -6,7 +6,7 @@ javascripts_dir  = "js"
 
 # Options
 line_comments    = false
-output_style     = :expanded
+output_style     = :nested
 preferred_syntax = :sass
 relative_assets  = true
 
