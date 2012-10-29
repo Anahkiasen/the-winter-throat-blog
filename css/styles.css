@@ -70,6 +70,9 @@ div#body .container .header a, div#body .container #sidebar li li a, #footer a, 
     white-space: pre; }
   #footer a:hover:after, .post .entry a:hover:after, .comments ol p a:hover:after {
     display: block; }
+  @media (max-width: 768px) {
+    #footer a:after, .post .entry a:after, .comments ol p a:after {
+      content: ""; } }
 
 #footer a:after, .post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, div#body .container #sidebar li li:hover, #footer, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
@@ -232,7 +235,7 @@ div#body .container #sidebar {
   div#body .container #content {
     float: left; }
   div#body .container #sidebar {
-    clear: both; } }
+    display: none; } }
 @media (min-width: 768px) {
   div#body .container #content {
     width: 66.10169%;
@@ -344,6 +347,11 @@ div#body .container #sidebar {
       .post .entry p.wp-caption-text {
         padding: 9px;
         text-align: center; }
+    @media (max-width: 768px) {
+      .post .entry h1 {
+        font-size: 23px; }
+      .post .entry p {
+        font-size: 16px; } }
   .post .postmetadata {
     background-color: #f7f7f7;
     color: #333333;
