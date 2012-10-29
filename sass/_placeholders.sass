@@ -17,7 +17,7 @@
   color: $nodeGreen
   position: relative
   &:after
-    +double-shadow
+    @extend %double-shadow
     @extend %rounded-corners
     @extend %text-shadow
     background-color: $base01
@@ -39,8 +39,11 @@
   font-family: 'Kreon', $sansFontFamily
 
 %baseBlock
-  +double-shadow
+  @extend %double-shadow
   @extend %text-shadow
   color: white
   font-size: ms(0)
   padding: ms(0)
+
+%double-shadow
+  +double-shadow

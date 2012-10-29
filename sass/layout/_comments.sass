@@ -8,10 +8,10 @@
   // Comments title ------------------------------------------------ /
 
   .title
+    @extend %double-shadow
     background-color: grey(30)
-    padding: ms(0)
     border: none
-    +double-shadow
+    padding: ms(0)
     h3
       @extend %text-shadow
       color: white
@@ -27,9 +27,9 @@
     // Comments ---------------------------------------------------- /
 
     li
-      font-size: ms(0)
-      color: $base01
       border: none
+      color: $base01
+      font-size: ms(0)
 
     // Author
     cite a
@@ -38,12 +38,12 @@
         color: $orange
     .commentmetadata
       border-bottom: 1px solid $base1
+      bottom: 30px
+      margin-bottom: -30px
+      padding: ms(-2)
+      position: relative
       text-align: right
       text-transform: uppercase
-      margin-bottom: -30px
-      position: relative
-      bottom: 30px
-      padding: ms(-2)
       a
         color: $base01
 
@@ -67,9 +67,9 @@
       width: 300px
     textarea
       @extend %border-box
-      width: 100%
-      padding: ms(0)
       font-family: $sansFontFamily
-    input[type=submit]
+      padding: ms(0)
       width: 100%
+    input[type=submit]
       padding: ms(-2)
+      width: 100%

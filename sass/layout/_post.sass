@@ -9,7 +9,7 @@
     font-size: 0
     a
       @extend %rounded-corners
-      +double-shadow
+      @extend %double-shadow
       background-color: $nodeGreen
       @extend %text-shadow
       color: white
@@ -85,23 +85,29 @@
   // Articles footer ----------------------------------------------- /
 
   .postmetadata
-    $backgroundColor: grey(30)
-    @extend %text-shadow
+    $backgroundColor: grey(95)
+    @extend %double-shadow
+    @extend %reset
     @extend %reset-links
-    background-color: $backgroundColor
+    @extend %text-shadow
+    background: $backgroundColor url($crisp)
+    color: grey(20)
     font-size: ms(0)
-    color: white
+    overflow: visible
+    padding: ms(0)
+    text-shadow: 0 2px 0 fade(black, 10)
     .one_article &
-      font-size: ms(0)
+      font-size: ms(0.5)
     a
+      $backgroundColor: grey(40)
+      @extend %double-shadow
       @extend %rounded-corners
-      +double-shadow
       @extend %transition
       background-color: darken($backgroundColor, 10)
-      padding: 0 5px
       color: white
+      padding: 0 5px
       &:hover
-        +double-shadow
+        @extend %double-shadow
         background-color: lighten($backgroundColor, 5)
         bottom: 2px
         padding-bottom: 2px

@@ -36,7 +36,7 @@ div#body .header, div#body .header #headerimg h1, div#body #sidebar, div#body #s
   transition: all 0.3s;
 }
 
-div#page, div#body, div#body .container, div#body .header, div#body .header #headerimg, div#body #sidebar, div#body #sidebar li, div#body #sidebar li .title, div#body #sidebar li .widgettitle, .post, .post .title, .post .entry, .comments ol {
+div#page, div#body, div#body .container, div#body .header, div#body .header #headerimg, div#body #sidebar, div#body #sidebar li, div#body #sidebar li .title, div#body #sidebar li .widgettitle, .post, .post .title, .post .entry, .post .postmetadata, .comments ol {
   background: none;
   border: none;
   height: auto;
@@ -58,9 +58,6 @@ div#body .header a:hover, div#body #sidebar li li a:hover, .post .title a:hover,
   position: relative;
 }
 .post .entry a:after, .comments ol cite a:after, .comments ol p a:after {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   background-color: #586e75;
   bottom: 30px;
   color: white;
@@ -83,12 +80,15 @@ body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #
 }
 
 .comments #commentform label {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 15px;
   padding: 15px;
+}
+
+.post .entry a:after, .comments ol cite a:after, .comments ol p a:after, .comments #commentform label, .navigation div a, .post .postmetadata, .post .postmetadata a, .post .postmetadata a:hover, .comments .title {
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -266,9 +266,6 @@ div#body #sidebar li li:before {
   font-size: 0;
 }
 .navigation div a {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   background-color: #79b738;
   color: white;
   display: block;
@@ -356,26 +353,23 @@ div#body #sidebar li li:before {
   text-align: center;
 }
 .post .postmetadata {
-  background-color: #4d4d4d;
+  background: #f2f2f2 url("http://i.imgur.com/I1pSr.png");
+  color: #333333;
   font-size: 15px;
-  color: white;
+  overflow: visible;
+  padding: 15px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 .one_article .post .postmetadata {
-  font-size: 15px;
+  font-size: 19px;
 }
 .post .postmetadata a {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  background-color: #333333;
-  padding: 0 5px;
+  background-color: #4d4d4d;
   color: white;
+  padding: 0 5px;
 }
 .post .postmetadata a:hover {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  background-color: #595959;
+  background-color: #737373;
   bottom: 2px;
   padding-bottom: 2px;
   position: relative;
@@ -386,11 +380,8 @@ div#body #sidebar li li:before {
 }
 .comments .title {
   background-color: #4d4d4d;
-  padding: 15px;
   border: none;
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
 }
 .comments .title h3 {
   color: white;
@@ -401,21 +392,21 @@ div#body #sidebar li li:before {
   padding-top: 0;
 }
 .comments ol li {
-  font-size: 15px;
-  color: #586e75;
   border: none;
+  color: #586e75;
+  font-size: 15px;
 }
 .comments ol cite a[href="http://blogs.wefrag.com/Anahkiasen"] {
   color: #cb4b16;
 }
 .comments ol .commentmetadata {
   border-bottom: 1px solid #93a1a1;
+  bottom: 30px;
+  margin-bottom: -30px;
+  padding: 6px;
+  position: relative;
   text-align: right;
   text-transform: uppercase;
-  margin-bottom: -30px;
-  position: relative;
-  bottom: 30px;
-  padding: 6px;
 }
 .comments ol .commentmetadata a {
   color: #586e75;
@@ -435,13 +426,13 @@ div#body #sidebar li li:before {
   width: 300px;
 }
 .comments #commentform textarea {
-  width: 100%;
-  padding: 15px;
   font-family: "Open Sans", "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 15px;
+  width: 100%;
 }
 .comments #commentform input[type=submit] {
-  width: 100%;
   padding: 6px;
+  width: 100%;
 }
 
 p a img {
