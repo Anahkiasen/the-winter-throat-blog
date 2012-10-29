@@ -46,6 +46,8 @@
       font-size: ms(2)
       text-shadow: 0 4px 0 fade(black, 30)
       text-transform: uppercase
+      +to($tablet)
+        font-size: ms(1)
     &:hover
       background-color: darken($titleColor, 5)
       +gradient-auto-vertical(darken($titleColor, 5))
@@ -73,6 +75,9 @@
       padding-bottom: ms(-2)
       border-bottom: 1px solid grey(90)
       font-size: ms(1.5)
+    img
+      max-width: 100%
+      height: auto
     p
       font-size: ms(0.5)
       text-align: justify

@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700|Open+Sans:400|Oswald:400,300,700);
-div#body #sidebar, div#body #sidebar li form .content, .comments #commentform textarea {
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+div#body .container #sidebar, div#body .container #sidebar li form .content, .comments #commentform textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -16,7 +20,7 @@ div#page {
     display: table;
     clear: both; }
 
-#header, div#body .header #headerimg .description {
+#header, div#body .container .header #headerimg .description {
   display: none; }
 
 .post .entry a:after, .comments ol p a:after, .navigation div a, .post .postmetadata a, p a img, pre, input, textarea {
@@ -24,13 +28,16 @@ div#page {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-div#body .header, div#body .header #headerimg h1, div#body #sidebar, div#body #sidebar li ul, div#body #sidebar li form .content, div#body #sidebar li li, .post .title, .post .postmetadata a, p a img, input, textarea {
+.post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, div#body .container #sidebar li li:hover, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
+
+div#body .container .header, div#body .container .header #headerimg h1, div#body .container #sidebar, div#body .container #sidebar li ul, div#body .container #sidebar li form .content, div#body .container #sidebar li li, .post .title, .post .postmetadata a, p a img, input, textarea {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-div#page, div#body, div#body .container, div#body .header, div#body .header #headerimg, div#body #sidebar, div#body #sidebar li, div#body #sidebar li .title, div#body #sidebar li .widgettitle, .post, .post .title, .post .entry, .post .postmetadata, .comments ol {
+div#page, div#body, div#body .container, div#body .container .header, div#body .container .header #headerimg, div#body .container #sidebar, div#body .container #sidebar li, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, .post, .post .title, .post .entry, .post .postmetadata, .comments ol {
   background: none;
   border: none;
   height: auto;
@@ -38,9 +45,9 @@ div#page, div#body, div#body .container, div#body .header, div#body .header #hea
   padding: 0;
   width: auto; }
 
-div#body .header a, div#body #sidebar li li a, .post .title a, .post .postmetadata a {
+div#body .container .header a, div#body .container #sidebar li li a, .post .title a, .post .postmetadata a {
   color: white; }
-  div#body .header a:hover, div#body #sidebar li li a:hover, .post .title a:hover, .post .postmetadata a:hover {
+  div#body .container .header a:hover, div#body .container #sidebar li li a:hover, .post .title a:hover, .post .postmetadata a:hover {
     color: white;
     text-decoration: none; }
 
@@ -59,10 +66,10 @@ div#body .header a, div#body #sidebar li li a, .post .title a, .post .postmetada
   .post .entry a:hover:after, .comments ol p a:hover:after {
     display: block; }
 
-.post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li:hover, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
+.post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, div#body .container #sidebar li li:hover, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
-body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li a {
+body, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, div#body .container #sidebar li li a {
   font-family: "Kreon", "Droid Serif", "droid-serif", Georgia, "Times New Roman", Times, serif; }
 
 .comments #commentform label {
@@ -90,26 +97,7 @@ div#page {
     div#page {
       max-width: 95%; } }
 
-div#body .container #content, div#body .container #sidebar {
-  margin-top: 265px; }
-div#body .container #content {
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%;
-  background: white;
-  position: relative;
-  z-index: 5; }
-  div#body .container #content.one_article {
-    width: 83.05085%;
-    float: left;
-    margin-right: 1.69492%;
-    margin-left: 8.47458%; }
-div#body .container #sidebar {
-  width: 32.20339%;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em; }
-div#body .header {
+div#body .container .header {
   position: absolute;
   left: 0;
   padding: 59px 0;
@@ -118,34 +106,45 @@ div#body .header {
   -moz-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   background: #1a1a1a url('data:image/png;base64,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'); }
-  div#body .header:hover {
+  div#body .container .header:hover {
     background-color: #333333; }
-  div#body .header #headerimg h1 {
+  div#body .container .header #headerimg h1 {
     font-family: "Oswald", "Open Sans", "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     text-shadow: 0 4px 0 gray, 0 6px 0 #666666, -15px -20px 10px rgba(0, 0, 0, 0.35), 0px 30px 30px rgba(0, 0, 0, 0.35);
     text-transform: uppercase; }
-    @media (min-width: 1500px) {
-      div#body .header #headerimg h1 {
-        font-size: 96px; } }
-    @media (min-width: 1200px) and (max-width: 1500px) {
-      div#body .header #headerimg h1 {
-        font-size: 59px; } }
-    div#body .header #headerimg h1 a {
+    div#body .container .header #headerimg h1 a {
       color: white; }
-div#body #sidebar {
-  position: relative;
-  right: 100px;
+  @media (min-width: 1500px) {
+    div#body .container .header h1 {
+      font-size: 96px; } }
+  @media (min-width: 768px) and (max-width: 1500px) {
+    div#body .container .header h1 {
+      font-size: 59px; } }
+  @media (min-width: 480px) and (max-width: 768px) {
+    div#body .container .header {
+      padding: 23px 0; }
+      div#body .container .header h1 {
+        font-size: 37px; } }
+  @media (max-width: 480px) {
+    div#body .container .header {
+      padding: 23px 0; }
+      div#body .container .header h1 {
+        font-size: 23px; } }
+div#body .container #content {
+  background: white; }
+  div#body .container #content.narrowcolumn {
+    max-width: 100%; }
+div#body .container #sidebar {
   padding: 14px;
-  z-index: 0;
   background-color: rgba(0, 0, 0, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
   opacity: 0.25; }
-  div#body #sidebar:hover {
+  div#body .container #sidebar:hover {
     right: 0;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1; }
-  div#body #sidebar li .title, div#body #sidebar li .widgettitle {
+  div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle {
     -webkit-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
@@ -156,7 +155,7 @@ div#body #sidebar {
     padding: 5px;
     text-align: center;
     text-transform: lowercase; }
-    div#body #sidebar li .title:before, div#body #sidebar li .title:after, div#body #sidebar li .widgettitle:before, div#body #sidebar li .widgettitle:after {
+    div#body .container #sidebar li .title:before, div#body .container #sidebar li .title:after, div#body .container #sidebar li .widgettitle:before, div#body .container #sidebar li .widgettitle:after {
       border-bottom: 12px solid transparent;
       bottom: -12px;
       content: "";
@@ -165,48 +164,81 @@ div#body #sidebar {
       position: absolute;
       width: 0;
       z-index: -5; }
-    div#body #sidebar li .title:before, div#body #sidebar li .widgettitle:before {
+    div#body .container #sidebar li .title:before, div#body .container #sidebar li .widgettitle:before {
       border-right: 12px solid #228aaa;
       left: 0; }
-    div#body #sidebar li .title:after, div#body #sidebar li .widgettitle:after {
+    div#body .container #sidebar li .title:after, div#body .container #sidebar li .widgettitle:after {
       border-left: 12px solid #228aaa;
       right: 0; }
-    div#body #sidebar li .title:hover, div#body #sidebar li .widgettitle:hover {
+    div#body .container #sidebar li .title:hover, div#body .container #sidebar li .widgettitle:hover {
       background-color: #55bddd; }
-  div#body #sidebar li ul, div#body #sidebar li form .content {
+  div#body .container #sidebar li ul, div#body .container #sidebar li form .content {
     list-style: none;
     background-color: rgba(255, 255, 255, 0.25);
     margin: 0 auto;
     overflow: hidden;
     padding: 0;
     width: 95%; }
-    div#body #sidebar li ul li, div#body #sidebar li form .content li {
+    div#body .container #sidebar li ul li, div#body .container #sidebar li form .content li {
       list-style-image: none;
       list-style-type: none;
       margin-left: 0; }
-  div#body #sidebar li form .content {
+  div#body .container #sidebar li form .content {
     padding: 14px;
     padding-top: 0;
     background-color: rgba(255, 255, 255, 0.4); }
-  div#body #sidebar li li {
+  div#body .container #sidebar li li {
     margin: 0;
     padding: 5px 9px; }
-    div#body #sidebar li li a {
+    div#body .container #sidebar li li a {
       color: #586e75;
       font-size: 14px;
       font-weight: 700; }
-    div#body #sidebar li li:hover {
+    div#body .container #sidebar li li:hover {
       padding-left: 14px;
       background-color: rgba(0, 0, 0, 0.15); }
-      div#body #sidebar li li:hover:before {
+      div#body .container #sidebar li li:hover:before {
         color: white;
         content: ">";
         font-size: 14px;
         margin-right: 9px; }
-      div#body #sidebar li li:hover a {
+      div#body .container #sidebar li li:hover a {
         color: white; }
-    div#body #sidebar li li:before {
+    div#body .container #sidebar li li:before {
       content: ""; }
+@media (min-width: 1500px) {
+  div#body .container #content, div#body .container #sidebar {
+    margin-top: 265px; } }
+@media (min-width: 768px) and (max-width: 1500px) {
+  div#body .container #content, div#body .container #sidebar {
+    margin-top: 205px; } }
+@media (max-width: 768px) {
+  div#body .container #content, div#body .container #sidebar {
+    margin-top: 105px; } }
+@media (max-width: 768px) {
+  div#body .container #content {
+    float: left; }
+  div#body .container #sidebar {
+    clear: both; } }
+@media (min-width: 768px) {
+  div#body .container #content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    position: relative;
+    z-index: 5; }
+    div#body .container #content.one_article {
+      width: 83.05085%;
+      float: left;
+      margin-right: 1.69492%;
+      margin-left: 8.47458%; }
+  div#body .container #sidebar {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    position: relative;
+    right: 100px;
+    z-index: 0; } }
 
 .navigation {
   padding: 14px;
@@ -250,6 +282,9 @@ div#body #sidebar {
       font-size: 37px;
       text-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
       text-transform: uppercase; }
+      @media (max-width: 768px) {
+        .post .title h2 {
+          font-size: 23px; } }
     .post .title:hover {
       background-color: #333333;
       background-color: #353535;
@@ -279,6 +314,9 @@ div#body #sidebar {
       padding-bottom: 5px;
       border-bottom: 1px solid #e6e6e6;
       font-size: 29px; }
+    .post .entry img {
+      max-width: 100%;
+      height: auto; }
     .post .entry p {
       font-size: 18px;
       text-align: justify; }

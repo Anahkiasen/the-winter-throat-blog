@@ -8,23 +8,39 @@ div#body
   .container
     @extend %reset
 
+    // Blocks import ----------------------------------------------- /
+
+    @import header
+    @import content
+    @import sidebar
+
+    // Responsive -------------------------------------------------- /
+
     // Header margin
     #content, #sidebar
-      margin-top: 265px
+      +from($wider)
+        margin-top: 265px
+      +from-to($tablet, $wider)
+        margin-top: 205px
+      +to($tablet)
+        margin-top: 105px
 
-    // Main blocks layout
-    $aside: 4
-    #content
-      +span-columns(($total-columns - $aside))
-      background: white
-      position: relative
-      z-index: 5
-      &.one_article
-        +span-columns(10)
-        +push(1)
-    #sidebar
-      +span-columns($aside omega)
-
-  // Import other blocks
-  @import header
-  @import sidebar
+    +to($tablet)
+      #content
+        float: left
+      #sidebar
+        clear: both
+    +from($tablet)
+      $aside: 4
+      #content
+        +span-columns(($total-columns - $aside))
+        position: relative
+        z-index: 5
+        &.one_article
+          +span-columns(10)
+          +push(1)
+      #sidebar
+        +span-columns($aside omega)
+        position: relative
+        right: 100px
+        z-index: 0

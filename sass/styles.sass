@@ -4,7 +4,7 @@
 $base-font-size: 14px
 
 // Add Cerberus/Bootstrap framework
-@import cerberus/import
+@import cerberus/public/import
 @import modules/fonts
 
 // Font stacks
@@ -39,9 +39,9 @@ div#page
   margin: auto
   max-width: 75%
   padding: 0 ms(0)
-  +to($ipad)
+  +to($tablet)
     max-width: 100%
-  +from-to($ipad, 1500px)
+  +from-to($tablet, $wider)
     max-width: 95%
 
 // Layout ---------------------------------------------------------- /

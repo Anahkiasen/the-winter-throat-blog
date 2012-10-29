@@ -40,9 +40,22 @@
       margin: 0
       text-shadow: 0 4px 0 grey(50), 0 6px 0 grey(40), -15px -20px 10px fade(black, 35), 0px 30px 30px fade(black, 35)
       text-transform: uppercase
-      +from(1500px)
-        font-size: ms(4)
-      +from-to($wide, 1500px)
-        font-size: ms(3)
       a
         color: white
+
+  // Responsive patterns ------------------------------------------- /
+
+  +from($wider)
+    h1
+      font-size: ms(4)
+  +from-to($tablet, $wider)
+    h1
+      font-size: ms(3)
+  +from-to($mobile, $tablet)
+    padding: ms(1) 0
+    h1
+      font-size: ms(2)
+  +to($mobile)
+    padding: ms(1) 0
+    h1
+      font-size: ms(1)
