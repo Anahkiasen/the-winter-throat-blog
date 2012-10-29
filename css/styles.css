@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700|Open+Sans:400,300,700|Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700|Open+Sans:400|Oswald:400,300,700);
 div#body #sidebar, div#body #sidebar li form .content, .comments #commentform textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
