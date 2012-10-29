@@ -63,7 +63,7 @@ div#body .header a, div#body #sidebar li li a, .post .title a, .post .postmetada
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
 body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #sidebar li li a {
-  font-family: "Kreon", "Open Sans", "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Kreon", "Droid Serif", "droid-serif", Georgia, "Times New Roman", Times, serif; }
 
 .comments #commentform label {
   color: white;
