@@ -67,8 +67,8 @@ body, div#body #sidebar li .title, div#body #sidebar li .widgettitle, div#body #
 
 .comments #commentform label {
   color: white;
-  font-size: 15px;
-  padding: 15px; }
+  font-size: 14px;
+  padding: 14px; }
 
 .post .entry a:after, .comments ol cite a:after, .comments ol p a:after, .comments #commentform label, .navigation div a, .post .postmetadata, .post .postmetadata a, .post .postmetadata a:hover, .comments .title {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
@@ -82,7 +82,7 @@ body {
 div#page {
   margin: auto;
   max-width: 75%;
-  padding: 0 15px; }
+  padding: 0 14px; }
   @media (max-width: 768px) {
     div#page {
       max-width: 100%; } }
@@ -116,7 +116,7 @@ div#body .header {
   background: #1a1a1a url("http://i.imgur.com/Lzrrl.png");
   position: absolute;
   left: 0;
-  padding: 64px 0;
+  padding: 59px 0;
   width: 100%; }
   div#body .header:hover {
     background-color: #333333; }
@@ -127,16 +127,16 @@ div#body .header {
     text-transform: uppercase; }
     @media (min-width: 1500px) {
       div#body .header #headerimg h1 {
-        font-size: 103px; } }
+        font-size: 96px; } }
     @media (min-width: 1200px) and (max-width: 1500px) {
       div#body .header #headerimg h1 {
-        font-size: 64px; } }
+        font-size: 59px; } }
     div#body .header #headerimg h1 a {
       color: white; }
 div#body #sidebar {
   position: relative;
   right: 100px;
-  padding: 15px;
+  padding: 14px;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
@@ -152,8 +152,8 @@ div#body #sidebar {
     position: relative;
     background-color: #2aacd5;
     color: white;
-    font-size: 24px;
-    padding: 6px;
+    font-size: 23px;
+    padding: 5px;
     text-align: center;
     text-transform: lowercase; }
     div#body #sidebar li .title:before, div#body #sidebar li .title:after, div#body #sidebar li .widgettitle:before, div#body #sidebar li .widgettitle:after {
@@ -185,23 +185,23 @@ div#body #sidebar {
       list-style-type: none;
       margin-left: 0; }
   div#body #sidebar li form .content {
-    padding: 15px;
+    padding: 14px;
     padding-top: 0;
     background-color: rgba(255, 255, 255, 0.4); }
   div#body #sidebar li li {
     margin: 0;
-    padding: 6px 9px; }
+    padding: 5px 9px; }
     div#body #sidebar li li a {
       color: #586e75;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700; }
     div#body #sidebar li li:hover {
-      padding-left: 15px;
+      padding-left: 14px;
       background-color: rgba(0, 0, 0, 0.15); }
       div#body #sidebar li li:hover:before {
         color: white;
         content: ">";
-        font-size: 15px;
+        font-size: 14px;
         margin-right: 9px; }
       div#body #sidebar li li:hover a {
         color: white; }
@@ -209,7 +209,7 @@ div#body #sidebar {
       content: ""; }
 
 .navigation {
-  padding: 15px;
+  padding: 14px;
   margin-bottom: 9px; }
   .navigation div {
     font-size: 0; }
@@ -217,8 +217,8 @@ div#body #sidebar {
       background-color: #79b738;
       color: white;
       display: block;
-      font-size: 12px;
-      padding: 6px; }
+      font-size: 14px;
+      padding: 5px; }
       .navigation div a:hover {
         text-decoration: none;
         background-color: #5f902c; }
@@ -226,7 +226,7 @@ div#body #sidebar {
       content: "<< "; }
 
 .post {
-  margin-bottom: 24px; }
+  margin-bottom: 23px; }
   .post .title {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
@@ -241,13 +241,13 @@ div#body #sidebar {
     border-top: 1px solid #666666;
     border-bottom: 1px solid #1a1a1a;
     background-color: #404040;
-    padding: 15px 24px;
+    padding: 14px 23px;
     position: relative;
     z-index: 5; }
     .post .title h2 {
       color: white;
       font-family: "Oswald", "Open Sans", "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 39px;
+      font-size: 37px;
       text-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
       text-transform: uppercase; }
     .post .title:hover {
@@ -261,26 +261,26 @@ div#body #sidebar {
       background-repeat: repeat-x;
       border-top: 1px solid #595959;
       border-bottom: 1px solid #0d0d0d;
-      padding-left: 39px; }
+      padding-left: 37px; }
     .post .title a {
       color: white; }
     .post .title small {
       color: white;
-      font-size: 15px; }
+      font-size: 14px; }
   .post .entry {
     color: #586e75;
     overflow: visible;
-    padding: 15px; }
+    padding: 14px; }
     .one_article .post .entry {
       padding-bottom: 0; }
     .post .entry h1, .post .entry h2 {
       color: #2c373b; }
     .post .entry h1 {
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       border-bottom: 1px solid #e6e6e6;
-      font-size: 31px; }
+      font-size: 29px; }
     .post .entry p {
-      font-size: 19px;
+      font-size: 18px;
       text-align: justify; }
       .post .entry p.wp-caption-text {
         padding: 9px;
@@ -288,12 +288,12 @@ div#body #sidebar {
   .post .postmetadata {
     background: #f2f2f2 url("http://i.imgur.com/I1pSr.png");
     color: #333333;
-    font-size: 15px;
+    font-size: 14px;
     overflow: visible;
-    padding: 15px;
+    padding: 14px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
     .one_article .post .postmetadata {
-      font-size: 19px; }
+      font-size: 18px; }
     .post .postmetadata a {
       background-color: #4d4d4d;
       color: white;
@@ -309,31 +309,31 @@ div#body #sidebar {
   .comments .title {
     background-color: #4d4d4d;
     border: none;
-    padding: 15px; }
+    padding: 14px; }
     .comments .title h3 {
       color: white;
-      font-size: 15px; }
+      font-size: 14px; }
   .comments ol {
-    padding: 15px;
+    padding: 14px;
     padding-top: 0; }
     .comments ol li {
       border: none;
       color: #586e75;
-      font-size: 15px; }
+      font-size: 14px; }
     .comments ol cite a[href="http://blogs.wefrag.com/Anahkiasen"] {
       color: #cb4b16; }
     .comments ol .commentmetadata {
       border-bottom: 1px solid #93a1a1;
       bottom: 30px;
       margin-bottom: -30px;
-      padding: 6px;
+      padding: 5px;
       position: relative;
       text-align: right;
       text-transform: uppercase; }
       .comments ol .commentmetadata a {
         color: #586e75; }
   .comments #commentform {
-    padding: 15px; }
+    padding: 14px; }
     .comments #commentform p {
       clear: both; }
     .comments #commentform label {
@@ -341,14 +341,14 @@ div#body #sidebar {
       float: left;
       font-weight: 100;
       margin-right: 9px;
-      padding: 6px;
+      padding: 5px;
       width: 300px; }
     .comments #commentform textarea {
       font-family: "Open Sans", "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding: 15px;
+      padding: 14px;
       width: 100%; }
     .comments #commentform input[type=submit] {
-      padding: 6px;
+      padding: 5px;
       width: 100%; }
 
 p a img {
@@ -372,7 +372,7 @@ div.wide {
 pre {
   background-color: #eee8d5;
   color: #586e75;
-  padding: 15px; }
+  padding: 14px; }
 
 input, textarea {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -380,8 +380,8 @@ input, textarea {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   border: 1px solid #cccccc;
   display: inline-block;
-  font-size: 15px;
-  line-height: 22.5px;
+  font-size: 14px;
+  line-height: 21px;
   padding: 2px 6px; }
   input:focus, textarea:focus {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
@@ -404,7 +404,7 @@ input[type=submit] {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
   *background-color: #425358;
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  margin-top: 15px; }
+  margin-top: 14px; }
   input[type=submit]:hover, input[type=submit]:active, input[type=submit].active, input[type=submit].disabled, input[type=submit][disabled] {
     color: white;
     background-color: #425358;
@@ -414,7 +414,7 @@ input[type=submit] {
 
 blockquote {
   border-left: 4px solid #e6e6e6;
-  padding-left: 15px;
+  padding-left: 14px;
   color: #839496; }
 
 del {
