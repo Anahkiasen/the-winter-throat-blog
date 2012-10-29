@@ -1,0 +1,3 @@
+[submodule "sass/cerberus"]
+	path = sass/cerberus
+	url = git@github.com:Anahkiasen/cerberus-laravel.git
