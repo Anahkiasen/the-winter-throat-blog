@@ -449,7 +449,8 @@ div.wide {
 pre, code {
   background-color: #eee8d5;
   color: #586e75;
-  padding: 14px; }
+  padding: 14px;
+  word-wrap: break-word; }
 
 code {
   display: inline;
