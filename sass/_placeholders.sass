@@ -45,6 +45,10 @@
     &:after
       content: ''
 
+%no-tooltip
+  &:after
+    content: ''
+
 // Base text-shadow ------------------------------------------------ /
 
 %text-shadow
@@ -68,6 +72,8 @@
 
 %double-shadow
   +double-shadow
+
+// Background images ----------------------------------------------- /
 
 %noisy
   background-image: inline-image('noise.png')

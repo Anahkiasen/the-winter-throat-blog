@@ -74,6 +74,9 @@ div#body .container .header a, div#body .container #sidebar li li a, #footer a, 
     #footer a:after, .post .entry a:after, .comments ol p a:after {
       content: ""; } }
 
+div.wide a:after {
+  content: ""; }
+
 #footer a:after, .post .entry a:after, .comments ol p a:after, .comments #commentform label, div#body .container #sidebar li .title, div#body .container #sidebar li .widgettitle, div#body .container #sidebar li li:hover, #footer, .navigation div a, .post .title, .post .postmetadata, .comments .title h3 {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
@@ -440,7 +443,8 @@ p a img {
     top: 2px; }
 
 div.wide {
-  width: 97% !important; }
+  width: 97% !important;
+  text-align: center; }
 
 pre, code {
   background-color: #eee8d5;
