@@ -23,7 +23,7 @@ div#page {
 #header, div#body .container .header #headerimg .description {
   display: none; }
 
-#footer a:after, .post .entry a:after, .comments ol p a:after, .navigation div a, .post .postmetadata a, p a img, pre, input, textarea {
+#footer a:after, .post .entry a:after, .comments ol p a:after, .navigation div a, .post .postmetadata a, p a img, pre, code, input, textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; }
@@ -108,7 +108,8 @@ div#page {
   padding: 0 14px; }
   @media (max-width: 768px) {
     div#page {
-      max-width: 100%; } }
+      max-width: 100%;
+      padding: 0; } }
   @media (min-width: 768px) and (max-width: 1500px) {
     div#page {
       max-width: 95%; } }
@@ -441,10 +442,16 @@ p a img {
 div.wide {
   width: 97% !important; }
 
-pre {
+pre, code {
   background-color: #eee8d5;
   color: #586e75;
   padding: 14px; }
+
+code {
+  display: inline;
+  padding: 3px;
+  line-height: 1;
+  font-size: 14px; }
 
 input, textarea {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
