@@ -1,8 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700|Open+Sans:400|Oswald:400,300,700);
-/*
-  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
-  rgba-background mixin can now be passed an option $dir variable
-*/
 div#body .container #sidebar, div#body .container #sidebar li form .content, .comments #commentform textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -452,6 +448,9 @@ pre, code {
   color: #586e75;
   padding: 14px;
   word-wrap: break-word; }
+
+.syntaxhighlighter {
+  padding: 14px 0px !important; }
 
 code {
   display: inline;
